@@ -8,6 +8,12 @@ json.is_discounted product.is_discounted?
 json.tax product.tax
 json.total product.total
 
+json.supplier product.supplier
+# json.supplier do
+#   json.id product.supplier.id
+#   json.name product.supplier.name
+# end
+
 json.formatted_price number_to_currency(product.price)
 json.formatted_tax number_to_currency(product.tax)
 json.formatted_total number_to_currency(product.total)
