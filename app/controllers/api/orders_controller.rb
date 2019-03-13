@@ -22,4 +22,9 @@ class Api::OrdersController < ApplicationController
     @order.save
     render "show.json.jbuilder"
   end
+
+  def show
+    @order = Order.find_by(id: params[:id])
+    render "show.json.jbuilder"
+  end
 end
