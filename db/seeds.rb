@@ -1,3 +1,6 @@
+User.create!(name: "Peter", email: "peter@email.com", password: "password")
+User.create!(name: "Test", email: "test@email.com", password: "password")
+
 Supplier.create!(name: "Amazon", email: "amazon@email.com", phone_number: "3432543543")
 Supplier.create!(name: "ThinkGeek", email: "thinkgeek@email.com", phone_number: "4432543543")
 
@@ -8,6 +11,23 @@ Product.create!({supplier_id: 2, name: "Space Cowboy Laser Gun", price: 170, des
 Product.create!({supplier_id: 2, name: "DnD Dice set", price: 57, description: "Take down mighty dragons with this timeless set of 20 sided wonders"})
 Product.create!({supplier_id: 1, name: "Sonic Screwdriver", price: 9, description: "The Doctor's sciencey magic wand to get out of tight spots. Note: does not work on wood"})
 Product.create!({supplier_id: 1, name: "Yoda sleeping bag", price: 40, description: "For real"})
+
+Category.create!(name: "Weapon")
+Category.create!(name: "Household")
+Category.create!(name: "Science Fiction")
+Category.create!(name: "Game")
+
+CategoryProduct.create!(category_id: 2, product_id: 1)
+CategoryProduct.create!(category_id: 3, product_id: 2)
+CategoryProduct.create!(category_id: 1, product_id: 3)
+CategoryProduct.create!(category_id: 3, product_id: 3)
+CategoryProduct.create!(category_id: 1, product_id: 4)
+CategoryProduct.create!(category_id: 3, product_id: 4)
+CategoryProduct.create!(category_id: 4, product_id: 5)
+CategoryProduct.create!(category_id: 1, product_id: 6)
+CategoryProduct.create!(category_id: 2, product_id: 6)
+CategoryProduct.create!(category_id: 3, product_id: 6)
+CategoryProduct.create!(category_id: 2, product_id: 7)
 
 Image.create!(product_id: 1, url: "https://i.pinimg.com/236x/14/4a/0b/144a0bffe37f29f414e2dae2bd0141cf.jpg")
 Image.create!(product_id: 2, url: "http://www.notcot.com/images/guide.gif")

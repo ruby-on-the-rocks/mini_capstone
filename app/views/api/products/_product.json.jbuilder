@@ -15,6 +15,8 @@ json.supplier product.supplier
 #   json.name product.supplier.name
 # end
 
+json.categories product.categories
+
 json.formatted_price number_to_currency(product.price)
 json.formatted_tax number_to_currency(product.tax)
 json.formatted_total number_to_currency(product.total)
