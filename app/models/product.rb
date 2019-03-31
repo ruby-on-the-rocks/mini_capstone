@@ -39,4 +39,12 @@ class Product < ApplicationRecord
   def total
     price + tax
   end
+
+  def primary_image
+    if images.length > 0
+      images[0].url
+    else
+      "https://vollrath.com/ClientCss/images/VollrathImages/No_Image_Available.jpg"
+    end
+  end
 end
